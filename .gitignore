@@ -1,0 +1,7 @@
+.ropeproject
+venv/
+.env
+__pycache__
+db/
+credentials.json
+token.json
