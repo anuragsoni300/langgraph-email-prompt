@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load all env variables
 load_dotenv()
 
-# config 
+# config
 config = {'recursion_limit': 100}
 
 workflow = Workflow()
@@ -36,5 +36,3 @@ print(Fore.GREEN + "Starting workflow..." + Style.RESET_ALL)
 for output in app.stream(initial_state, config):
     for key, value in output.items():
         print(Fore.CYAN + f"Finished running: {key}:" + Style.RESET_ALL)
-
-
