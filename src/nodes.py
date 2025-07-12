@@ -122,17 +122,17 @@ class Nodes:
         """Determines if the email needs to be rewritten based on the review and trial count."""
         email_sendable = state["sendable"]
         if email_sendable:
-            print(Fore.GREEN + "Email is good, ready to be sent!!!" + Style.RESET_ALL)
+            print(Fore.GREEN + "Email is good" + Style.RESET_ALL)
             state["emails"].pop()
             state["writer_messages"] = []
             return "send"
         elif state["trials"] >= 3:
-            print(Fore.RED + "Email is not good, we reached max trials must stop!!!" + Style.RESET_ALL)
+            print(Fore.RED + "Email is not good, tried 3 time so exiting" + Style.RESET_ALL)
             state["emails"].pop()
             state["writer_messages"] = []
             return "stop"
         else:
-            print(Fore.RED + "Email is not good, must rewrite it..." + Style.RESET_ALL)
+            print(Fore.RED + "Email is not good, rewriting..." + Style.RESET_ALL)
             return "rewrite"
 
     def create_draft_response(self, state: GraphState) -> GraphState:
