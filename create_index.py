@@ -23,7 +23,7 @@ Context: {context}
 """
 
 print("Loading & Chunking Docs...")
-loader = TextLoader("./data/agency.txt")
+loader = TextLoader("./data/indiamart.txt")
 docs = loader.load()
 
 doc_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
@@ -53,4 +53,3 @@ query = "What are your pricing options?"
 result = rag_chain.invoke(query)
 print(f"Question: {query}")
 print(f"Answer: {result}")
-
