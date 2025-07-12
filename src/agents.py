@@ -12,7 +12,7 @@ class Agents():
     def __init__(self):
         # Choose which LLMs to use for each agent (GPT-4o, Gemini, LLAMA3,...)
         # gemini = ChatGroq(model_name="gemini-3.3-70b-versatile", temperature=0.1)
-        gemini = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)
+        gemini = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0.1)
 
         # QA assistant chat
         embeddings = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004")
